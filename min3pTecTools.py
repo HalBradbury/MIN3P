@@ -31,14 +31,12 @@ def plot2DTecFile(dataFrame, scalarName, vmin, vmax):
     CS = plt.contourf(x, y, z, levels=levels, cmap=cm.viridis, extend='both')
 
     colorbar = plt.colorbar(CS)
-    plt.xlabel('y / m')
-    plt.ylabel('x / m')
     plt.show()
     
 def plot1DTecFile(dataFrame, scalarName):
     plt.plot(dataFrame[scalarName], dataFrame['z'])
-    maxdepth=max(dataFrame['z'])
-    plt.ylim([maxdepth, 0])
+    #maxdepth=max(dataFrame['z'])
+    #plt.ylim([maxdepth, 0])
     
 def getDataCats(directory, run_name):
     os.chdir(directory)
